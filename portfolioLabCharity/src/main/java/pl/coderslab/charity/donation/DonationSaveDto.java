@@ -1,41 +1,23 @@
 package pl.coderslab.charity.donation;
 
-import org.springframework.format.annotation.DateTimeFormat;
-import pl.coderslab.charity.institution.Institution;
 import pl.coderslab.charity.category.Category;
+import pl.coderslab.charity.institution.Institution;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-
-@Entity
-@Table(name= Donation.TABLE_NAME)
-public class Donation {
-
-    final static String TABLE_NAME="donations";
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class DonationSaveDto {
     private Long id;
     private Integer quantity;
-    @OneToMany(mappedBy = "donation", fetch = FetchType.LAZY)
     private List<Category> categories;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="institution_id")
     private Institution institution;
     private String street;
     private String city;
     private String zipCode;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate pickUpDate;
     private LocalTime pickUpTime;
     private String pickUpComment;
-
-    public Donation(){
-
-    }
 
     public Long getId() {
         return id;

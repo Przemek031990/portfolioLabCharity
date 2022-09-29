@@ -1,6 +1,8 @@
 package pl.coderslab.charity.category;
 
 
+import pl.coderslab.charity.donation.Donation;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,7 +15,8 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
+    @ManyToOne
+    private Donation donation;
     public Category(){
 
     }
@@ -34,6 +37,11 @@ public class Category {
         this.name = name;
     }
 
+    public Donation getDonation() {
+        return donation;
+    }
 
-
+    public void setDonation(Donation donation) {
+        this.donation = donation;
+    }
 }

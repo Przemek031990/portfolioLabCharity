@@ -7,7 +7,7 @@
 <section class="stats">
     <div class="container container--85">
         <div class="stats--item">
-            <em>13</em>
+            <em>${iloscWorkow}</em>
 
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
@@ -15,7 +15,7 @@
         </div>
 
         <div class="stats--item">
-            <em>5</em>
+            <em>${iloscDarow}</em>
             <h3>Przekazanych darów</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
                 quam.</p>
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <a href="#" class="btn btn--large">Załóż konto</a>
+<%--    <a href="#" class="btn btn--large">Zaloguj się</a>--%>
 </section>
 
 <section class="about-us">
@@ -66,18 +66,32 @@
 
 <section class="help">
     <h2>Komu pomagamy?</h2>
-
+<%--    <c:forEach items="${allInstitution}" var="institution">--%>
+<%--        <h1>--%>
+<%--            ${institution.name}--%>
+<%--            ${institution.description}--%>
+<%--        </h1>--%>
+<%--    </c:forEach>--%>
     <!-- SLIDE 1 -->
+
     <div class="help--slides active" data-id="1">
         <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy.
             Możesz sprawdzić czym się zajmują.</p>
-
+        <ul class="help--slides-items">
+            <c:forEach items="${allInstitution}" var="institution">
+                <li class="col">
+                    <div class="title">${institution.name}</div>
+                    <div class="subtitle">${institution.description}</div>
+                </li>
+            </c:forEach>
+        </ul>
         <ul class="help--slides-items">
             <li>
                 <div class="col">
-                    <div class="title">Fundacja "Dbam o Zdrowie"</div>
-                    <div class="subtitle">Cel i misja: Pomoc dzieciom z ubogich rodzin.</div>
+                   <div class="title">Fundacja "A kogo"</div>
+                    <div class="subtitle">Cel i misja: Pomoc wybudzaniu dzieci ze śpiączki.</div>
                 </div>
+            </li>
 
                 <div class="col">
                     <div class="title">Fundacja "A kogo"</div>
@@ -98,7 +112,7 @@
             </li>
 
         </ul>
-    </div>
 
+    </div>
 </section>
 <%@ include file="footer.jsp" %>

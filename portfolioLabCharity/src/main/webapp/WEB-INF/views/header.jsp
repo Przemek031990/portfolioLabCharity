@@ -4,6 +4,7 @@
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,8 +17,8 @@
 <header class="header--main-page">
     <nav class="container container--70">
         <ul class="nav--actions">
-            <li><a href="" class="btn btn--small btn--without-border">Zaloguj</a></li>
-            <li><a href="#" class="btn btn--small btn--highlighted">Załóż konto</a></li>
+<%--            <li><a href="" class="btn btn--small btn--without-border">Zaloguj</a></li>--%>
+<%--            <li><a href="#" class="btn btn--small btn--highlighted">Załóż konto</a></li>--%>
         </ul>
 
         <ul>
