@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <%--    <a href="#" class="btn btn--large">Zaloguj się</a>--%>
+        <a href="form1" class="btn btn--large">Podaruj dar</a>
 </section>
 
 <section class="about-us">

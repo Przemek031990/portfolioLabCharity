@@ -124,6 +124,10 @@ public class HomeController {
     @PostMapping("/form5")
     public String addDonation4(DonationSaveDto donation, RedirectAttributes redirectAttributes) {
         donationService.addDonation(donation);
-        return "index";
+        redirectAttributes.addFlashAttribute(
+                "Dar został dodany");
+//                "Dar %s został zapisany".formatted(donation.getId()));
+
+        return "/";
     }
 }

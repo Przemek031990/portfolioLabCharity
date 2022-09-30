@@ -51,7 +51,7 @@
 
     <div class="form-group form-group--buttons">
         <a href="form4" type="button" class="btn prev-step">Wstecz</a>
-        <a href="index" type="submit" class="btn">Potwierdzam</a>
+        <a href="/" type="submit" class="btn">Potwierdzam</a>
     </div>
 </div>
 </form>
