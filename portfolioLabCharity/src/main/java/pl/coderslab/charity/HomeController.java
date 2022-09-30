@@ -55,19 +55,75 @@ public class HomeController {
 //        List<CategoryDto> allCategory = categoryService.findAllCategory();
         model.addAttribute("iloscWorkow", "" + iloscWorkow.get());
         model.addAttribute("iloscDarow", "" + iloscDarow.get());
-        model.addAttribute("allInstitution",  allInstitution);
+        model.addAttribute("allInstitution", allInstitution);
         return "index";
     }
 
-    @GetMapping("/dodaj-dar")
+    @GetMapping("/form1")
     public String addDonationForm(Model model) {
         DonationSaveDto donation = new DonationSaveDto();
         model.addAttribute("donation", donation);
-        return "donation-form";
+        return "form1";
     }
-//@PostMapping("/dodaj-dar")
-//    public String addDonation(DonationSaveDto donation, RedirectAttributes redirectAttributes) {
-//        donationService.addDonation(donation);
-//
-//}
+
+    @PostMapping("/form1")
+    public String addDonation(DonationSaveDto donation, RedirectAttributes redirectAttributes) {
+        donationService.addDonation(donation);
+
+        return "form2";
+
+
+    }
+
+    @GetMapping("/form2")
+    public String addDonationForm2(Model model) {
+        DonationSaveDto donation = new DonationSaveDto();
+        model.addAttribute("donation", donation);
+        return "form2";
+    }
+
+    @PostMapping("/form2")
+    public String addDonation1(DonationSaveDto donation, RedirectAttributes redirectAttributes) {
+        donationService.addDonation(donation);
+        return "form3";
+    }
+
+    @GetMapping("/form3")
+    public String addDonationForm3(Model model) {
+        DonationSaveDto donation = new DonationSaveDto();
+        model.addAttribute("donation", donation);
+        return "form3";
+    }
+
+    @PostMapping("/form3")
+    public String addDonation2(DonationSaveDto donation, RedirectAttributes redirectAttributes) {
+        donationService.addDonation(donation);
+        return "form4";
+    }
+
+    @GetMapping("/form4")
+    public String addDonationForm4(Model model) {
+        DonationSaveDto donation = new DonationSaveDto();
+        model.addAttribute("donation", donation);
+        return "form4";
+    }
+
+    @PostMapping("/form4")
+    public String addDonation3(DonationSaveDto donation, RedirectAttributes redirectAttributes) {
+        donationService.addDonation(donation);
+        return "form5";
+    }
+
+    @GetMapping("/form5")
+    public String addDonationForm5(Model model) {
+        DonationSaveDto donation = new DonationSaveDto();
+        model.addAttribute("donation", donation);
+        return "form5";
+    }
+
+    @PostMapping("/form5")
+    public String addDonation4(DonationSaveDto donation, RedirectAttributes redirectAttributes) {
+        donationService.addDonation(donation);
+        return "index";
+    }
 }
